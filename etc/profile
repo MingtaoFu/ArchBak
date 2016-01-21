@@ -1,0 +1,44 @@
+# /etc/profile
+
+#Set our umask
+umask 022
+
+# Set our default path
+PATH="/root/.gem/ruby/2.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/mingtao/jetbrains/webstorm/bin/:/home/mingtao/jetbrains/idea/bin:/home/mingtao/jetbrains/clion/bin:/home/mingtao/jetbrains/pycharm/bin:/home/mingtao/.gem/ruby/2.3.0/bin"
+export PATH
+
+# Load profiles from /etc/profile.d
+if test -d /etc/profile.d/; then
+	for profile in /etc/profile.d/*.sh; do
+		test -r "$profile" && . "$profile"
+	done
+	unset profile
+fi
+
+# Source global bash config
+if test "$PS1" && test "$BASH" && test -z ${POSIXLY_CORRECT+x} && test -r /etc/bash.bashrc; then
+	. /etc/bash.bashrc
+fi
+
+# Termcap is outdated, old, and crusty, kill it.
+unset TERMCAP
+
+# Man is much better than us at figuring this out
+unset MANPATH
+
+
+
+export GEM_PATH=/home/mingtao/.gem/ruby/2.3.0:/usr/lib/ruby/gems/2.3.0'
+
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_60
+export CLASSPATH=${JAVA_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+export ANDROID_HOME=/home/mingtao/android-sdk
+
+export PATH=${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:$PATH
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+alias hust='sudo mentohust -uU201417210 -pningganmabu -nenp4s0f2 -d1 -a0 -i2001:250:4000:8180:55b5:2697:aff6:6ebf -b3'

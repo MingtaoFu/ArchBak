@@ -1,0 +1,21 @@
+[connection]
+id=MI 2S 1
+uuid=f94c302e-a961-4db7-9112-ba1f8650f6c8
+type=wifi
+permissions=
+secondaries=
+
+[wifi]
+mac-address=9C:D2:1E:3D:83:97
+mac-address-blacklist=
+mode=infrastructure
+seen-bssids=
+ssid=MI 2S
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+dns-search=
+method=auto

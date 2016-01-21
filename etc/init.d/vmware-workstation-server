@@ -1,0 +1,235 @@
+#!/bin/sh
+#
+# Copyright (C) 1998-2010 VMware, Inc.  All Rights Reserved.
+#
+# This script manages the services needed to run VMware software
+
+# VMWARE_INIT_INFO
+
+SCRIPTNAME="$(basename $(readlink -f "$0"))"
+MODNAME="hostd"
+ETCDIR=/etc/vmware
+
+ADMIN_TOOL=vmware-wssc-adminTool
+VIM_CMD=vmware-vim-cmd
+HOHO_ADMIN=""
+
+. $ETCDIR/bootstrap
+libdir="$LIBDIR"/vmware
+
+. "$libdir"/scripts/util.sh
+
+# This comment is a hack to prevent RedHat distributions from outputing
+# "Starting <basename of this script>" when running this startup script.
+# We just need to write the word daemon followed by a space
+
+SYSTEM_DAEMON=vmware-hostd
+# We need a more specific match than just "vmware-hostd".
+PGREP_MATCH="vmware/bin/$SYSTEM_DAEMON"
+
+# Make sure the ESC byte is literal: Ash does not support echo -e
+rc_done='[71G done'
+rc_failed='[71Gfailed'
+
+#
+# Utilities
+#
+
+upperCase() {
+  echo "`echo $1|tr '[:lower:]' '[:upper:]'`"
+}
+
+wssc_findAdmin() {
+   HOHO_ADMIN=`$ADMIN_TOOL $ETCDIR/hostd/authorization.xml 2>/dev/null`
+   adminRet=$?
+
+   if [ $adminRet != 0 ]; then
+      echo "Could not find administrative user. Error $adminRet."
+      HOHO_ADMIN=""
+   fi
+
+   return $adminRet
+}
+
+vim_shutdown() {
+   if [ "x" = "x$HOHO_ADMIN" ]; then
+      return 1
+   fi
+   $VIM_CMD -U "$HOHO_ADMIN" internalsvc/shutdown
+}
+
+vim_autostop() {
+   if [ "x" = "x$HOHO_ADMIN" ]; then
+      return 1
+   fi
+   $VIM_CMD -U "$HOHO_ADMIN" hostsvc/autostartmanager/autostop
+}
+
+
+vmware_start_daemon() {
+   # Check if certificates exist.  If not, we need to generate them, ala sshd.
+   if [ ! -e ${ETCDIR}/ssl/rui.key -o ! -e ${ETCDIR}/ssl/rui.crt ]; then
+      mkdir -p ${ETCDIR}/ssl
+      ${libdir}/bin/openssl req -x509 -days 365 -newkey rsa:2048 -sha256 -keyout ${ETCDIR}/ssl/rui.key -out ${ETCDIR}/ssl/rui.crt -config ${ETCDIR}/ssl/hostd.ssl.config
+      chmod -R 600 ${ETCDIR}/ssl
+   fi
+
+   # Start the daemon
+   cd "$BINDIR" && "$BINDIR"/$1 \
+      -a -d $ETCDIR/hostd/config.xml
+
+   return $?
+}
+
+vmware_kill_daemon() {
+   pid=`pgrep -f $PGREP_MATCH`
+
+   if [ "$pid" = "" ]; then
+      return 0
+   fi
+
+   # Kill the vmware-hostd process
+   kill -15 $pid
+   # Give it a few seconds to shut down properly
+   for f in '1 2 3 4 5 6 7 8 9 10'; do
+      if ! ps $pid >/dev/null; then
+         # No need to wait if it's already down
+         break
+      fi
+      sleep 1
+   done
+
+   # Give it a few seconds to shut down after the kill
+   for f in '1 2 3 4 5 6 7 8 9 10'; do
+      if ! ps $pid >/dev/null; then
+         # No need to wait if it's already down
+         break
+      fi
+      sleep 1
+   done
+
+   if ps $pid >/dev/null; then
+      # Failed to kill it...
+      return 1
+   else
+      # Success!
+      return 0
+   fi
+}
+
+vmware_stop_daemon() {
+   pid=`pgrep -f $PGREP_MATCH`
+
+   if [ "$pid" = "" ]; then
+      return 0
+   fi
+
+   vim_autostop
+   vmware_kill_daemon
+}
+
+vmware_force_stop_daemon() {
+   pid=`pgrep -f $PGREP_MATCH`
+
+   if [ "$pid" = "" ]; then
+      return 0
+   fi
+
+   vmware_stop_daemon || kill -9 $pid
+
+   # Give it a few seconds to shut down after the hard kill
+   for f in '1 2 3 4 5 6 7 8 9 10'; do
+      if ! ps $pid >/dev/null; then
+         # No need to wait if it's already down
+         break
+      fi
+      sleep 1
+   done
+
+   if ps $pid >/dev/null; then
+      # Failed to kill it, even with a kill -9
+      return 1
+   else
+      # Success!
+      return 0
+   fi
+
+}
+
+vmware_daemon_status() {
+   pid=`pgrep -f $PGREP_MATCH`
+
+   if [ "$pid" = "" ]; then
+      echo 'Workstation Server is not running'
+   else
+      echo 'Workstation Server is running, process' $pid
+
+   fi
+}
+
+main()
+{
+   # See how we were called.
+   case "$1" in
+      start)
+         exitcode='0'
+
+         vmware_exec 'Starting Workstation Server:' vmware_start_daemon $SYSTEM_DAEMON
+         exitcode=$(($exitcode + $?))
+
+
+         if [ "$exitcode" -gt 0 ]; then
+            exit 1
+         fi
+         ;;
+
+      stop)
+         wssc_findAdmin
+         exitcode='0'
+
+         vmware_exec 'Stopping Workstation Server:' vmware_stop_daemon
+         exitcode=$(($exitcode + $?))
+
+         if [ "$exitcode" -gt 0 ]; then
+            exit 1
+         fi
+         ;;
+
+      force-stop)
+         wssc_findAdmin
+         exitcode='0'
+
+         vmware_exec 'Forcing stop of Workstation Server:' vmware_force_stop_daemon
+         exitcode=$(($exitcode + $?))
+
+         if [ "$exitcode" -gt 0 ]; then
+            exit 1
+         fi
+         ;;
+
+      restart)
+         vmware_kill_daemon && "$0" start
+         ;;
+
+      force-reload)
+         "$0" force-stop && "$0" start
+         ;;
+
+      source)
+         # Used to source the script so that functions can be
+         # selectively overridden.
+         return 0
+         ;;
+
+      status)
+         vmware_daemon_status
+         ;;
+      *)
+         echo "Usage: `basename "$0"` {start|stop|status|restart|force-reload}"
+         exit 1
+   esac
+
+   exit 0
+}
+
+main "$@"

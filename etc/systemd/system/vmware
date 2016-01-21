@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+#
+# Copyright 2005-2008 VMware, Inc.  All rights reserved.
+#
+# Wrapper for the real 'vmware' binary. Ensure that the
+# binary will find all the shared libraries it needs. If a shared
+# library is not available from any of the standard system-wide
+# locations, we provide it from the location where the VMware software
+# is installed.
+#
+
+set -e
+
+ETCDIR=/etc/vmware
+. $ETCDIR/bootstrap
+
+export PRODUCT_NAME="VMware Workstation"
+libdir="$LIBDIR"/vmware
+
+bindir=$libdir/bin
+sharedir=$libdir/share
+
+export VMWARE_ZENITY_UI_FILE=$sharedir/zenity/zenity.ui
+ZENITY=$bindir/vmware-zenity
+
+toolsRebuildError="
+The VMware Tools kernel modules could not be automatically rebuilt.
+
+Please manually run:
+  vmware-config-tools.pl --modules-only
+To rebuild them.
+"
+
+# The new Ubuntu menu system "steals" our menu out of the UI, which causes problems
+# with fullscreening.  These variables disable that in various unity versions.
+export APPMENU_DISPLAY_BOTH=1
+export UBUNTU_MENUPROXY=0
+
+# bug-buddy breaks logging
+export GNOME_DISABLE_CRASH_DIALOG=1
+
+vmci_alias='pci:v000015ADd00000740sv*sd*bc*sc*i*'
+vsock_alias='vmware_vsock'
+vmmon='vmmon'
+
+vmware_module_exists()
+{
+   modalias=$1
+   /sbin/modprobe -n $modalias > /dev/null 2>&1
+}
+
+# If there are command line arguments like -version, launch the binary without
+# checking configuration state or running the module updater.
+if echo "$1" | grep -q "^-"; then
+   exec "$libdir"/bin/"vmware" "$@"
+fi
+
+# Only run the GUI if DISPLAY is set.
+if [ -z "$DISPLAY" ]; then
+   echo "DISPLAY is not set, unable to open the $PRODUCT_NAME user interface."
+   exit 1
+fi
+
+# If we are running in a VM, vmci, vsock, and vmblock will not be under our
+# control.  If the files don't exist and we are not controlling them, call out
+# to Tools in order to build them.
+# Also note that vmblock may be handled as a fuse module and hence may not
+# be installed as a kernel module.  It might also not be there at all so we don't
+# check for it.
+if ! cat $libdir/modules/modules.xml|grep -q 'name="vmci"'; then
+   set +e # Unset failure mode, we want to catch and deal with errors on our own
+   failure=0
+   if ! vmware_module_exists $vmci_alias || ! vmware_module_exists $vsock_alias; then
+      # The locations database is appended to with each reconfiguration, so
+      # be sure only to grab only the final appearing value.
+      tools_BINDIR=`grep "answer BINDIR" /etc/vmware-tools/locations | tail -1 |cut -d ' ' -f 3`
+      if [ -d "$tools_BINDIR" ]; then
+         echo "Rebuilding VMware Tools modules..."
+         outfile=`mktemp /tmp/vmware-modulesXXXXXX`
+         ${tools_BINDIR}/vmware-config-tools.pl --modules-only --default >${outfile} 2>&1
+         retval=$?
+         if [ $retval != "0" ]; then
+            cat ${outfile}
+            rm -f ${outfile}
+            failure=1
+         fi
+         rm -f ${outfile}
+      else
+         failure=1
+      fi
+   fi
+
+   # If we hit a failure, report to the user that we failed.
+   if [ "$failure" = "1" ]; then
+      echo "******************************************************************"
+      echo "$toolsRebuildError"
+      $ZENITY --error --text="$toolsRebuildError"
+      exit 1
+   fi
+   set -e # Reset failure mode
+fi
+
+if "$BINDIR"/vmware-modconfig --appname="VMware Workstation" --icon="vmware-workstation" &&
+   vmware_module_exists $vmmon; then
+   exec "$libdir"/bin/"vmware" "$@"
+fi
+
+exit 1

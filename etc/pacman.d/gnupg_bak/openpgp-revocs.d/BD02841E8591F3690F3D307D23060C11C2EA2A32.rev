@@ -1,0 +1,28 @@
+This is a revocation certificate for the OpenPGP key:
+
+pub  rsa2048/C2EA2A32 2015-11-10
+      Key fingerprint = BD02 841E 8591 F369 0F3D  307D 2306 0C11 C2EA 2A32
+uid                  Pacman Keyring Master Key <pacman@localhost>
+
+Use it to revoke this key in case of a compromise or loss of
+the secret key.  However, if the secret key is still accessible,
+it is better to generate a new revocation certificate and give
+a reason for the revocation.
+
+To avoid an accidental use of this file, a colon has been inserted
+before the 5 dashes below.  Remove this colon with a text editor
+before making use of this revocation certificate.
+
+:-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2
+Comment: This is a revocation certificate
+
+iQEfBCABCAAJBQJWQVbQAh0AAAoJECMGDBHC6ioyK14IAJ3v6TJWdmQJh2T6IMrK
+GtfmmOWmS02uglMnQqgzWYdrGLehYL3jr9lA4tHLw/BMX+h0LJZ3IBFKpDUBuk4o
+5QkkS/1Nwqr0pOGzaeM84041ltFit26RR5Hi1Xd1mxCEe8k+ca2D+Gh3a2ewu/dl
+ZKbAEX2Z/RIGZvX0vxPbGh7aiSTdNFH5mO9XZtNpZcCz+G+J9Ew1hPMx7hHMeK88
+4yo/HEFCYm+ENhDq9/fmuIWQiumP6ACZ7IppC0rmpw4en5GcigpM7DtR3X093dZn
+gAntt1WVoyrVsUxVR6DK1opuj8yrUidna1ZWNLdqjg3SVak76wkwtA7OLVUMRzP/
+FaA=
+=ys29
+-----END PGP PUBLIC KEY BLOCK-----

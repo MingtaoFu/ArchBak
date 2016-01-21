@@ -1,0 +1,18 @@
+[connection]
+id=Wired connection 1
+uuid=202dc579-1c0b-4faf-b122-5e0150ed3e86
+type=ethernet
+permissions=
+secondaries=
+
+[ethernet]
+mac-address=10:C3:7B:AF:8E:AF
+mac-address-blacklist=
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+dns-search=
+method=auto
