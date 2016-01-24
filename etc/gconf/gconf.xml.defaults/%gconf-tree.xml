@@ -1,6 +1,32 @@
 <?xml version="1.0"?>
 <gconf>
 	<dir name="system">
+		<dir name="smb">
+			<entry name="workgroup" mtime="1453565964" schema="/schemas/system/smb/workgroup"/>
+		</dir>
+		<dir name="proxy">
+			<entry name="autoconfig_url" mtime="1453565964" schema="/schemas/system/proxy/autoconfig_url"/>
+			<entry name="socks_port" mtime="1453565964" schema="/schemas/system/proxy/socks_port"/>
+			<entry name="socks_host" mtime="1453565964" schema="/schemas/system/proxy/socks_host"/>
+			<entry name="ftp_port" mtime="1453565964" schema="/schemas/system/proxy/ftp_port"/>
+			<entry name="ftp_host" mtime="1453565964" schema="/schemas/system/proxy/ftp_host"/>
+			<entry name="secure_port" mtime="1453565964" schema="/schemas/system/proxy/secure_port"/>
+			<entry name="secure_host" mtime="1453565964" schema="/schemas/system/proxy/secure_host"/>
+			<entry name="mode" mtime="1453565964" schema="/schemas/system/proxy/mode"/>
+		</dir>
+		<dir name="http_proxy">
+			<entry name="ignore_hosts" mtime="1453565964" schema="/schemas/system/http_proxy/ignore_hosts"/>
+			<entry name="authentication_password" mtime="1453565964" schema="/schemas/system/http_proxy/authentication_password"/>
+			<entry name="authentication_user" mtime="1453565964" schema="/schemas/system/http_proxy/authentication_user"/>
+			<entry name="use_authentication" mtime="1453565964" schema="/schemas/system/http_proxy/use_authentication"/>
+			<entry name="port" mtime="1453565964" schema="/schemas/system/http_proxy/port"/>
+			<entry name="host" mtime="1453565964" schema="/schemas/system/http_proxy/host"/>
+			<entry name="use_http_proxy" mtime="1453565964" schema="/schemas/system/http_proxy/use_http_proxy"/>
+		</dir>
+		<dir name="dns_sd">
+			<entry name="extra_domains" mtime="1453565964" schema="/schemas/system/dns_sd/extra_domains"/>
+			<entry name="display_local" mtime="1453565964" schema="/schemas/system/dns_sd/display_local"/>
+		</dir>
 		<dir name="gstreamer">
 			<dir name="0.10">
 				<dir name="default">
@@ -21,7 +47,219 @@
 	</dir>
 	<dir name="desktop">
 		<dir name="gnome">
+			<dir name="typing_break">
+				<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/typing_break/enabled"/>
+				<entry name="allow_postpone" mtime="1453565964" schema="/schemas/desktop/gnome/typing_break/allow_postpone"/>
+				<entry name="break_time" mtime="1453565964" schema="/schemas/desktop/gnome/typing_break/break_time"/>
+				<entry name="type_time" mtime="1453565964" schema="/schemas/desktop/gnome/typing_break/type_time"/>
+			</dir>
+			<dir name="thumbnailers">
+				<entry name="disable_all" mtime="1453565964" schema="/schemas/desktop/gnome/thumbnailers/disable_all"/>
+			</dir>
+			<dir name="thumbnail_cache">
+				<entry name="maximum_size" mtime="1453565964" schema="/schemas/desktop/gnome/thumbnail_cache/maximum_size"/>
+				<entry name="maximum_age" mtime="1453565964" schema="/schemas/desktop/gnome/thumbnail_cache/maximum_age"/>
+			</dir>
+			<dir name="sound">
+				<entry name="input_feedback_sounds" mtime="1453565964" schema="/schemas/desktop/gnome/sound/input_feedback_sounds"/>
+				<entry name="theme_name" mtime="1453565964" schema="/schemas/desktop/gnome/sound/theme_name"/>
+				<entry name="event_sounds" mtime="1453565964" schema="/schemas/desktop/gnome/sound/event_sounds"/>
+				<entry name="enable_esd" mtime="1453565964" schema="/schemas/desktop/gnome/sound/enable_esd"/>
+				<entry name="default_mixer_tracks" mtime="1453565964" schema="/schemas/desktop/gnome/sound/default_mixer_tracks"/>
+				<entry name="default_mixer_device" mtime="1453565964" schema="/schemas/desktop/gnome/sound/default_mixer_device"/>
+			</dir>
+			<dir name="peripherals">
+				<dir name="mouse">
+					<entry name="cursor_size" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/cursor_size"/>
+					<entry name="cursor_theme" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/cursor_theme"/>
+					<entry name="cursor_font" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/cursor_font"/>
+					<entry name="locate_pointer" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/locate_pointer"/>
+					<entry name="double_click" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/double_click"/>
+					<entry name="drag_threshold" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/drag_threshold"/>
+					<entry name="motion_threshold" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/motion_threshold"/>
+					<entry name="motion_acceleration" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/motion_acceleration"/>
+					<entry name="single_click" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/single_click"/>
+					<entry name="left_handed" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/mouse/left_handed"/>
+				</dir>
+				<dir name="keyboard">
+					<entry name="remember_numlock_state" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/remember_numlock_state"/>
+					<entry name="bell_custom_file" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_custom_file"/>
+					<entry name="bell_duration" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_duration"/>
+					<entry name="bell_pitch" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_pitch"/>
+					<entry name="bell_mode" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/bell_mode"/>
+					<entry name="click_volume" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/click_volume"/>
+					<entry name="delay" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/delay"/>
+					<entry name="rate" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/rate"/>
+					<entry name="click" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/click"/>
+					<entry name="repeat" mtime="1453565964" schema="/schemas/desktop/gnome/peripherals/keyboard/repeat"/>
+				</dir>
+			</dir>
+			<dir name="lockdown">
+				<entry name="disable_application_handlers" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_application_handlers"/>
+				<entry name="disable_lock_screen" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_lock_screen"/>
+				<entry name="disable_user_switching" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_user_switching"/>
+				<entry name="disable_print_setup" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_print_setup"/>
+				<entry name="disable_printing" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_printing"/>
+				<entry name="disable_save_to_disk" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_save_to_disk"/>
+				<entry name="disable_command_line" mtime="1453565964" schema="/schemas/desktop/gnome/lockdown/disable_command_line"/>
+			</dir>
+			<dir name="interface">
+				<entry name="show_unicode_menu" mtime="1453565964" schema="/schemas/desktop/gnome/interface/show_unicode_menu"/>
+				<entry name="show_input_method_menu" mtime="1453565964" schema="/schemas/desktop/gnome/interface/show_input_method_menu"/>
+				<entry name="menubar_accel" mtime="1453565964" schema="/schemas/desktop/gnome/interface/menubar_accel"/>
+				<entry name="file_chooser_backend" mtime="1453565964" schema="/schemas/desktop/gnome/interface/file_chooser_backend"/>
+				<entry name="status_bar_meter_on_right" mtime="1453565964" schema="/schemas/desktop/gnome/interface/status_bar_meter_on_right"/>
+				<entry name="use_custom_font" mtime="1453565964" schema="/schemas/desktop/gnome/interface/use_custom_font"/>
+				<entry name="monospace_font_name" mtime="1453565964" schema="/schemas/desktop/gnome/interface/monospace_font_name"/>
+				<entry name="document_font_name" mtime="1453565964" schema="/schemas/desktop/gnome/interface/document_font_name"/>
+				<entry name="gtk-im-module" mtime="1453565964" schema="/schemas/desktop/gnome/interface/gtk-im-module"/>
+				<entry name="gtk-im-status-style" mtime="1453565964" schema="/schemas/desktop/gnome/interface/gtk-im-status-style"/>
+				<entry name="gtk-im-preedit-style" mtime="1453565964" schema="/schemas/desktop/gnome/interface/gtk-im-preedit-style"/>
+				<entry name="font_name" mtime="1453565964" schema="/schemas/desktop/gnome/interface/font_name"/>
+				<entry name="gtk_key_theme" mtime="1453565964" schema="/schemas/desktop/gnome/interface/gtk_key_theme"/>
+				<entry name="gtk_theme" mtime="1453565964" schema="/schemas/desktop/gnome/interface/gtk_theme"/>
+				<entry name="icon_theme" mtime="1453565964" schema="/schemas/desktop/gnome/interface/icon_theme"/>
+				<entry name="cursor_blink_time" mtime="1453565964" schema="/schemas/desktop/gnome/interface/cursor_blink_time"/>
+				<entry name="cursor_blink" mtime="1453565964" schema="/schemas/desktop/gnome/interface/cursor_blink"/>
+				<entry name="toolbar_icons_size" mtime="1453565964" schema="/schemas/desktop/gnome/interface/toolbar_icons_size"/>
+				<entry name="toolbar_detachable" mtime="1453565964" schema="/schemas/desktop/gnome/interface/toolbar_detachable"/>
+				<entry name="menubar_detachable" mtime="1453565964" schema="/schemas/desktop/gnome/interface/menubar_detachable"/>
+				<entry name="buttons_have_icons" mtime="1453565964" schema="/schemas/desktop/gnome/interface/buttons_have_icons"/>
+				<entry name="menus_have_icons" mtime="1453565964" schema="/schemas/desktop/gnome/interface/menus_have_icons"/>
+				<entry name="toolbar_style" mtime="1453565964" schema="/schemas/desktop/gnome/interface/toolbar_style"/>
+				<entry name="can_change_accels" mtime="1453565964" schema="/schemas/desktop/gnome/interface/can_change_accels"/>
+				<entry name="menus_have_tearoff" mtime="1453565964" schema="/schemas/desktop/gnome/interface/menus_have_tearoff"/>
+				<entry name="enable_animations" mtime="1453565964" schema="/schemas/desktop/gnome/interface/enable_animations"/>
+				<entry name="accessibility" mtime="1453565964" schema="/schemas/desktop/gnome/interface/accessibility"/>
+			</dir>
+			<dir name="file_views">
+				<entry name="icon_theme" mtime="1453565964" schema="/schemas/desktop/gnome/file-views/icon_theme"/>
+			</dir>
+			<dir name="background">
+				<entry name="color_shading_type" mtime="1453565964" schema="/schemas/desktop/gnome/background/color_shading_type"/>
+				<entry name="secondary_color" mtime="1453565964" schema="/schemas/desktop/gnome/background/secondary_color"/>
+				<entry name="primary_color" mtime="1453565964" schema="/schemas/desktop/gnome/background/primary_color"/>
+				<entry name="picture_opacity" mtime="1453565964" schema="/schemas/desktop/gnome/background/picture_opacity"/>
+				<entry name="picture_filename" mtime="1453565964" schema="/schemas/desktop/gnome/background/picture_filename"/>
+				<entry name="picture_options" mtime="1453565964" schema="/schemas/desktop/gnome/background/picture_options"/>
+				<entry name="draw_background" mtime="1453565964" schema="/schemas/desktop/gnome/background/draw_background"/>
+			</dir>
+			<dir name="applications">
+				<dir name="component_viewer">
+					<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/component_viewer/exec"/>
+				</dir>
+				<dir name="window_manager">
+					<entry name="workspace_names" mtime="1453565964" schema="/schemas/desktop/gnome/applications/window_manager/workspace_names"/>
+					<entry name="number_of_workspaces" mtime="1453565964" schema="/schemas/desktop/gnome/applications/window_manager/number_of_workspaces"/>
+					<entry name="current" mtime="1453565964" schema="/schemas/desktop/gnome/applications/window_manager/current"/>
+					<entry name="default" mtime="1453565964" schema="/schemas/desktop/gnome/applications/window_manager/default"/>
+				</dir>
+				<dir name="terminal">
+					<entry name="exec_arg" mtime="1453565964" schema="/schemas/desktop/gnome/applications/terminal/exec_arg"/>
+					<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/terminal/exec"/>
+				</dir>
+				<dir name="tasks">
+					<entry name="needs_term" mtime="1453565964" schema="/schemas/desktop/gnome/applications/tasks/needs_term"/>
+					<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/tasks/exec"/>
+				</dir>
+				<dir name="calendar">
+					<entry name="needs_term" mtime="1453565964" schema="/schemas/desktop/gnome/applications/calendar/needs_term"/>
+					<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/calendar/exec"/>
+				</dir>
+				<dir name="browser">
+					<entry name="nremote" mtime="1453565964" schema="/schemas/desktop/gnome/applications/browser/nremote"/>
+					<entry name="needs_term" mtime="1453565964" schema="/schemas/desktop/gnome/applications/browser/needs_term"/>
+					<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/browser/exec"/>
+				</dir>
+				<dir name="at">
+					<dir name="visual">
+						<entry name="startup" mtime="1453565964" schema="/schemas/desktop/gnome/applications/at/visual/startup"/>
+						<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/at/visual/exec"/>
+					</dir>
+					<dir name="mobility">
+						<entry name="startup" mtime="1453565964" schema="/schemas/desktop/gnome/applications/at/mobility/startup"/>
+						<entry name="exec" mtime="1453565964" schema="/schemas/desktop/gnome/applications/at/mobility/exec"/>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="accessibility">
+				<dir name="startup">
+					<entry name="exec_ats" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/startup/exec_ats"/>
+				</dir>
+				<dir name="keyboard">
+					<entry name="togglekeys_enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/togglekeys_enable"/>
+					<entry name="stickykeys_modifier_beep" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/stickykeys_modifier_beep"/>
+					<entry name="stickykeys_two_key_off" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/stickykeys_two_key_off"/>
+					<entry name="stickykeys_enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/stickykeys_enable"/>
+					<entry name="slowkeys_beep_reject" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_reject"/>
+					<entry name="slowkeys_beep_accept" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_accept"/>
+					<entry name="slowkeys_beep_press" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_press"/>
+					<entry name="slowkeys_delay" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_delay"/>
+					<entry name="slowkeys_enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/slowkeys_enable"/>
+					<entry name="mousekeys_init_delay" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_init_delay"/>
+					<entry name="mousekeys_accel_time" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_accel_time"/>
+					<entry name="mousekeys_max_speed" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_max_speed"/>
+					<entry name="mousekeys_enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/mousekeys_enable"/>
+					<entry name="bouncekeys_beep_reject" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_beep_reject"/>
+					<entry name="bouncekeys_delay" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_delay"/>
+					<entry name="bouncekeys_enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_enable"/>
+					<entry name="timeout" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/timeout"/>
+					<entry name="timeout_enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/timeout_enable"/>
+					<entry name="feature_state_change_beep" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/feature_state_change_beep"/>
+					<entry name="enable" mtime="1453565964" schema="/schemas/desktop/gnome/accessibility/keyboard/enable"/>
+				</dir>
+			</dir>
 			<dir name="url-handlers">
+				<dir name="h323">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/h323/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/h323/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/h323/enabled"/>
+				</dir>
+				<dir name="callto">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/callto/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/callto/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/callto/enabled"/>
+				</dir>
+				<dir name="aim">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/aim/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/aim/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/aim/enabled"/>
+				</dir>
+				<dir name="mailto">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/mailto/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/mailto/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/mailto/enabled"/>
+				</dir>
+				<dir name="https">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/https/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/https/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/https/enabled"/>
+				</dir>
+				<dir name="http">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/http/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/http/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/http/enabled"/>
+				</dir>
+				<dir name="man">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/man/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/man/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/man/enabled"/>
+				</dir>
+				<dir name="info">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/info/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/info/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/info/enabled"/>
+				</dir>
+				<dir name="ghelp">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/ghelp/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/ghelp/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/ghelp/enabled"/>
+				</dir>
+				<dir name="trash">
+					<entry name="needs_terminal" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/trash/needs_terminal"/>
+					<entry name="command" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/trash/command"/>
+					<entry name="enabled" mtime="1453565964" schema="/schemas/desktop/gnome/url-handlers/trash/enabled"/>
+				</dir>
 				<dir name="vms">
 					<entry name="needs_terminal" mtime="1451202063" type="bool" value="false"/>
 					<entry name="enabled" mtime="1451202063" type="bool" value="true"/>
@@ -40,7 +278,1429 @@
 		</dir>
 	</dir>
 	<dir name="schemas">
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="url-handlers">
+					<dir name="h323">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“H323”URLs 的程序">
+								<default type="string">
+									<stringvalue>gnomemeeting -c %s</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“H323”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“h323”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“h323”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="callto">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“callto”URLs 的程序">
+								<default type="string">
+									<stringvalue>gnomemeeting -c %s</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“callto”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“callto”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“callto”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="aim">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“aim”URLs 的程序">
+								<default type="string">
+									<stringvalue>gaim-remote uri &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“aim”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“aim”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“aim”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="mailto">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“mailto”URLs 的程序">
+								<default type="string">
+									<stringvalue>evolution %s</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“mailto”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“mailto”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“mailto”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="https">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“https”URLs 的程序">
+								<default type="string">
+									<stringvalue>epiphany %s</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“https”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“https”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“https”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="http">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“http”URLs 的程序">
+								<default type="string">
+									<stringvalue>epiphany %s</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“http”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“http”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“http”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="man">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“man”URLs 的程序">
+								<default type="string">
+									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“man”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“man”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“man”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="info">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“info”URLs 的程序">
+								<default type="string">
+									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“info”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“info”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“info”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ghelp">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“ghelp”URLs 的程序">
+								<default type="string">
+									<stringvalue>gnome-help &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“ghelp”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“ghelp”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“ghelp”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="trash">
+						<entry name="needs_terminal" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="在终端运行命令">
+								<default type="bool" value="false"/>
+								<longdesc>True 代表要处理此 URL 的程序应该在终端中运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="command" mtime="1453565964" type="schema" stype="string" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="处理“trash”URLs 的程序">
+								<default type="string">
+									<stringvalue>nautilus &quot;%s&quot;</stringvalue>
+								</default>
+								<longdesc>若启用的话，用于处理“trash”URLs 的命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="指定的命令是否应处理“trash”URLs">
+								<default type="bool" value="true"/>
+								<longdesc>设为 true 可在“command”键中指定一个程序来处理“trash”URLs。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="typing_break">
+					<entry name="enabled" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="是否允许键盘锁定">
+							<default type="bool" value="false"/>
+							<longdesc>
+	  Whether or not keyboard locking is enabled.
+         </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="allow_postpone" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="允许推迟间断">
+							<default type="bool" value="false"/>
+							<longdesc>
+          Whether or not the typing break screen can be postponed.
+         </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="break_time" mtime="1453565964" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="间断时间">
+							<default type="int" value="3"/>
+							<longdesc>
+          Number of minutes that the typing break should last.
+         </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="type_time" mtime="1453565964" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="打字时间">
+							<default type="int" value="60"/>
+							<longdesc>
+	  Number of minutes of typing time before break mode starts.
+         </longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="thumbnailers">
+					<entry name="disable_all" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁用所有外部缩略图程序">
+							<default type="bool" value="false"/>
+							<longdesc>设为 true 可禁用所有外部缩略图程序，而不管这些程序自身是启用还是禁用。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="thumbnail_cache">
+					<entry name="maximum_size" mtime="1453565964" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+							<default type="int" value="512"/>
+							<longdesc>缓存缩略图的最大大小，以 mb 为单位。设定为-1以禁用自动清除。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="maximum_age" mtime="1453565964" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+							<default type="int" value="180"/>
+							<longdesc>缓存缩略图的最长寿命，以天为单位。设定为-1以禁用自动清除。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="sound">
+					<entry name="input_feedback_sounds" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="输入反馈声音">
+							<default type="bool" value="false"/>
+							<longdesc>是否在输入事件发生时播放声音。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="theme_name" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="声音主题名称">
+							<default type="string">
+								<stringvalue>freedesktop</stringvalue>
+							</default>
+							<longdesc>用于事件声音的 XDG 声音主题。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="event_sounds" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="事件的声音">
+							<default type="bool" value="false"/>
+							<longdesc>是否在用户事件发生时播放声音。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="enable_esd" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="启用 ESD">
+							<default type="bool" value="false"/>
+							<longdesc>在启动时启用声音服务器。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="default_mixer_tracks" mtime="1453565964" type="schema" stype="list" owner="gnome" list_type="string">
+						<local_schema locale="C" short_desc="默认混音器音轨">
+							<default type="list" ltype="string">
+							</default>
+							<longdesc>多媒体按键绑定所使用的默认混音器音轨。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="default_mixer_device" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="默认混音器设备">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>多媒体按键绑定所使用的默认混音器设备。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="peripherals">
+					<dir name="mouse">
+						<entry name="cursor_size" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="光标大小">
+								<default type="int" value="18"/>
+								<longdesc>
+	  Size of the cursor referenced by cursor_theme.
+	</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="cursor_theme" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="光标主题">
+								<longdesc>
+	  Cursor theme name. Used only by Xservers that support Xcursor,
+	  such as XFree86 4.3 and later.
+	</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="cursor_font" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="光标字体">
+								<longdesc>
+	  Font name of the cursor. If unset, the default font is
+	  used. This value is only propagated to the X server start of
+	  each session, so changing it mid-session won&apos;t have an effect
+	  until the next time you log in.
+	</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="locate_pointer" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="定位指针">
+								<default type="bool" value="false"/>
+								<longdesc>Highlights the current location of the pointer when the
+        Control key is pressed and released.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="double_click" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="双击时间">
+								<default type="int" value="400"/>
+								<longdesc>鼠标双击的时间长度。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="drag_threshold" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="拖放阈值">
+								<default type="int" value="8"/>
+								<longdesc>判断拖放开始的距离。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="motion_threshold" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="运动阈值">
+								<default type="int" value="-1"/>
+								<longdesc>Distance in pixels the pointer must move before
+        accelerated mouse motion is activated.  A value of -1 is the
+        system default.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="motion_acceleration" mtime="1453565964" type="schema" stype="float" owner="gnome">
+							<local_schema locale="C" short_desc="单击">
+								<default type="float" value="-1"/>
+								<longdesc>Acceleration multiplier for mouse motion.  A value of -1
+        is the system default.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="single_click" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="单击">
+								<default type="bool" value="true"/>
+								<longdesc>单击以打开图标。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="left_handed" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="鼠标按钮方向">
+								<default type="bool" value="false"/>
+								<longdesc>为左手鼠标交换左右鼠标按钮。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="keyboard">
+						<entry name="remember_numlock_state" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="记住 NumLock 状态">
+								<default type="bool" value="true"/>
+								<longdesc>设定为 true 时，GNOME 将在不同会话间记住 NumLock 灯的状态。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bell_custom_file" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="自定义键盘铃声文件名">
+								<longdesc>要播放的响铃声音的文件名。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bell_duration" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="int" value="100"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bell_pitch" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="int" value="400"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bell_mode" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="string">
+									<stringvalue>on</stringvalue>
+								</default>
+								<longdesc>可用的值是“on”，“off”和“custom”。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="click_volume" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="int" value="0"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="delay" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="int" value="500"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="rate" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="int" value="30"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="click" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="true"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="repeat" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="true"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="lockdown">
+					<entry name="disable_application_handlers" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁用 URL 和 MIME 类型处理器">
+							<default type="bool" value="false"/>
+							<longdesc>
+         Prevent running any URL or MIME type handler applications.
+        </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_lock_screen" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁止锁定屏幕">
+							<default type="bool" value="false"/>
+							<longdesc>
+         Prevent the user to lock his screen.
+        </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_user_switching" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁用用户切换">
+							<default type="bool" value="false"/>
+							<longdesc>
+         Prevent the user from switching to another account while his
+         session is active.
+        </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_print_setup" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁用打印设置">
+							<default type="bool" value="false"/>
+							<longdesc>
+         Prevent the user from modifying print settings. For example,
+         this would disable access to all applications&apos; &quot;Print Setup&quot;
+         dialogs.
+        </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_printing" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁用打印">
+							<default type="bool" value="false"/>
+							<longdesc>
+          Prevent the user from printing. For example, this would
+          disable access to all applications&apos; &quot;Print&quot; dialogs.
+        </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_save_to_disk" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁止将文件保存到磁盘">
+							<default type="bool" value="false"/>
+							<longdesc>
+          Prevent the user from saving files to disk. For example,
+          this would disable access to all applications&apos; &quot;Save as&quot;
+          dialogs.
+        </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="disable_command_line" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="禁用命令行">
+							<default type="bool" value="false"/>
+							<longdesc>
+          Prevent the user from accessing the terminal or specifying
+          a command line to be executed. For example, this would
+          disable access to the panel&apos;s &quot;Run Application&quot; dialog.
+        </longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="interface">
+					<entry name="show_unicode_menu" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="显示“Unicode 控制字符”菜单">
+							<default type="bool" value="true"/>
+							<longdesc>Whether the context menus of entries and text views 
+        should offer to insert control characters.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_input_method_menu" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="显示“输入法”菜单">
+							<default type="bool" value="true"/>
+							<longdesc>Whether the context menus of entries and text views 
+        should offer to change the input method.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menubar_accel" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="菜单栏加速键">
+							<default type="string">
+								<stringvalue>F10</stringvalue>
+							</default>
+							<longdesc>打开菜单栏的键盘快捷键。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="file_chooser_backend" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GtkFileChooser 的模块">
+							<default type="string">
+								<stringvalue>gio</stringvalue>
+							</default>
+							<longdesc>Module to use as the filesystem model for the
+	GtkFileChooser widget.  Possible values are &quot;gio&quot;, &quot;gnome-vfs&quot; and
+	&quot;gtk+&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="status_bar_meter_on_right" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="状态栏位于右边">
+							<default type="bool" value="false"/>
+							<longdesc>是否在右边显示状态栏指示。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="use_custom_font" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="使用自定义字体">
+							<default type="bool" value="false"/>
+							<longdesc>是否在 gtk+ 程序中使用自定义字体。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="monospace_font_name" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="等距字体">
+							<default type="string">
+								<stringvalue>Monospace 10</stringvalue>
+							</default>
+							<longdesc>Name of a monospaced (fixed-width) font for use
+              in locations like terminals.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="document_font_name" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="文档字体">
+							<default type="string">
+								<stringvalue>Sans 10</stringvalue>
+							</default>
+							<longdesc>读取文档所使用的默认字体的名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk-im-module" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GTK IM 模块">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>GTK+ 使用的输入法模块的名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk-im-status-style" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GTK IM 状态风格">
+							<default type="string">
+								<stringvalue>callback</stringvalue>
+							</default>
+							<longdesc>gtk+ 使用的 GTK+ 输入法状态风格的名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk-im-preedit-style" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="GTK IM 预编辑风格">
+							<default type="string">
+								<stringvalue>callback</stringvalue>
+							</default>
+							<longdesc>gtk+ 使用的 GTK+ 输入法预编辑风格的名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="font_name" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="默认字体">
+							<default type="string">
+								<stringvalue>Sans 10</stringvalue>
+							</default>
+							<longdesc>gtk+ 使用的默认字体的名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk_key_theme" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Gtk+ 主题">
+							<default type="string">
+								<stringvalue>Default</stringvalue>
+							</default>
+							<longdesc>gtk+ 使用的默认主题的基本名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="gtk_theme" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="Gtk+ 主题">
+							<default type="string">
+								<stringvalue>Clearlooks</stringvalue>
+							</default>
+							<longdesc>gtk+ 使用的默认主题的基本名称。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="icon_theme" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="图标主题">
+							<default type="string">
+								<stringvalue>gnome</stringvalue>
+							</default>
+							<longdesc>用于面板、Nautilus 等的图标主题。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cursor_blink_time" mtime="1453565964" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="光标闪烁时间">
+							<default type="int" value="1200"/>
+							<longdesc>光标闪烁周期的长度，单位为毫秒。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="cursor_blink" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="光标闪烁">
+							<default type="bool" value="true"/>
+							<longdesc>光标是否应该闪烁。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toolbar_icons_size" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="工具栏图标大小">
+							<default type="string">
+								<stringvalue>large-toolbar</stringvalue>
+							</default>
+							<longdesc>Size of icons in toolbars, either &quot;small-toolbar&quot; or
+        &quot;large-toolbar&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toolbar_detachable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="工具栏可分离">
+							<default type="bool" value="false"/>
+							<longdesc>用户是否能分离工具栏并四处移动它们。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menubar_detachable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="菜单栏可分离">
+							<default type="bool" value="false"/>
+							<longdesc>用户是否能分离菜单栏并四处移动它们。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="buttons_have_icons" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="按钮上有图标">
+							<default type="bool" value="false"/>
+							<longdesc>是否在按钮文本旁边显示图标。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menus_have_icons" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="菜单上使用图标">
+							<default type="bool" value="false"/>
+							<longdesc>是否在菜单上菜单项的旁边显示图标。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="toolbar_style" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="工具栏风格">
+							<default type="string">
+								<stringvalue>both-horiz</stringvalue>
+							</default>
+							<longdesc>Toolbar Style. Valid values are &quot;both&quot;, &quot;both-horiz&quot;, &quot;icons&quot;, and
+	&quot;text&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="can_change_accels" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="能改变加速键">
+							<default type="bool" value="false"/>
+							<longdesc>Whether the user can dynamically type a new accelerator when 
+	positioned over an active menuitem.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="menus_have_tearoff" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="菜单具有分离条">
+							<default type="bool" value="false"/>
+							<longdesc>菜单是否应该有分离条。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="enable_animations" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="启用动画">
+							<default type="bool" value="true"/>
+							<longdesc>Whether animations should be displayed. Note: This is a global
+	key, it changes the behaviour of the window manager, the panel etc.
+	</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accessibility" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="启用辅助工具">
+							<default type="bool" value="false"/>
+							<longdesc>应用程序是否应该有辅助访问支持。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="file-views">
+					<entry name="icon_theme" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="文件图标主题">
+							<default type="string">
+								<stringvalue>crux_teal</stringvalue>
+							</default>
+							<longdesc>用于显示文件图标的主题。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="background">
+					<entry name="color_shading_type" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="颜色渐变类型">
+							<default type="string">
+								<stringvalue>solid</stringvalue>
+							</default>
+							<longdesc>如何渐变背景颜色。可用的值有“水平渐变”，“垂直渐变”和“纯色”。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="secondary_color" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="次要颜色">
+							<default type="string">
+								<stringvalue>#66ba00</stringvalue>
+							</default>
+							<longdesc>绘制渐变带时的右边或下边颜色，绘制纯色时不使用。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="primary_color" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="主要颜色">
+							<default type="string">
+								<stringvalue>#66ba00</stringvalue>
+							</default>
+							<longdesc>绘制渐变带时左边或上边的颜色，或者是绘制的纯色。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="picture_opacity" mtime="1453565964" type="schema" stype="int" owner="gnome">
+						<local_schema locale="C" short_desc="图片不透明度">
+							<default type="int" value="100"/>
+							<longdesc>绘制背景图片的不透明度。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="picture_filename" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="图片文件名">
+							<default type="string">
+								<stringvalue>/usr/share/pixmaps/backgrounds/gnome/background-default.jpg</stringvalue>
+							</default>
+							<longdesc>用作背景图片的文件。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="picture_options" mtime="1453565964" type="schema" stype="string" owner="gnome">
+						<local_schema locale="C" short_desc="图片选项">
+							<default type="string">
+								<stringvalue>zoom</stringvalue>
+							</default>
+							<longdesc>Determines how the image set by wallpaper_filename is
+    rendered.  Possible values are &quot;none&quot;, &quot;wallpaper&quot;, &quot;centered&quot;, &quot;scaled&quot;,
+    &quot;stretched&quot;, &quot;zoom&quot;, &quot;spanned&quot;.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="draw_background" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+						<local_schema locale="C" short_desc="绘制桌面背景">
+							<default type="bool" value="true"/>
+							<longdesc>让 GNOME 绘制桌面背景。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="applications">
+					<dir name="component_viewer">
+						<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="默认组件查看器应用程序">
+								<default type="string">
+									<stringvalue>nautilus %s</stringvalue>
+								</default>
+								<longdesc>该应用程序用于查看需要组件才能查看的文件。参数 %s 将被替换为文件的 URI，参数 %c 将被替换为组件 IID。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="window_manager">
+						<entry name="workspace_names" mtime="1453565964" type="schema" stype="list" owner="gnome" list_type="string">
+							<local_schema locale="C" short_desc="工作区名称(不推荐)">
+								<longdesc>
+          A list with names of the first window manager workspaces.
+          This key has been deprecated since GNOME 2.12.
+        </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="number_of_workspaces" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="工作区数目(不推荐)">
+								<longdesc>
+          The number of workspaces the window manager should use
+          This key has been deprecated since GNOME 2.12.
+        </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="current" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="用户窗口管理器(不推荐)">
+								<longdesc>
+          Window manager to try first.
+          This key has been deprecated since GNOME 2.12.
+        </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="default" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="默认窗口管理器(不推荐)">
+								<longdesc>
+          Fallback window manager if user window manager can&apos;t be found.
+          This key has been deprecated since GNOME 2.12.
+        </longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="terminal">
+						<entry name="exec_arg" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="默认终端的执行参数">
+								<default type="string">
+									<stringvalue>-x</stringvalue>
+								</default>
+								<longdesc>为默认终端应用程序所使用的执行参数。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+							<local_schema locale="C" short_desc="默认终端应用程序">
+								<default type="string">
+									<stringvalue>gnome-terminal</stringvalue>
+								</default>
+								<longdesc>为需要终端的应用程序所使用的默认终端应用程序。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="tasks">
+						<entry name="needs_term" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="任务需要终端">
+								<default type="bool" value="false"/>
+								<longdesc>默认的任务应用程序是否需要终端来运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="默认任务">
+								<default type="string">
+									<stringvalue>evolution</stringvalue>
+								</default>
+								<longdesc>默认任务应用程序</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="calendar">
+						<entry name="needs_term" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="日历需要终端">
+								<default type="bool" value="false"/>
+								<longdesc>默认的日历应用程序是否需要终端来运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="默认日历">
+								<default type="string">
+									<stringvalue>evolution</stringvalue>
+								</default>
+								<longdesc>终端日历应用程序</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="browser">
+						<entry name="nremote" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="浏览器理解远程命令">
+								<default type="bool" value="true"/>
+								<longdesc>默认的浏览器是否理解 netscape 远程控制命令。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="needs_term" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="浏览器需要终端">
+								<default type="bool" value="false"/>
+								<longdesc>默认的浏览器是否需要终端来运行。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome">
+							<local_schema locale="C" short_desc="默认浏览器">
+								<default type="string">
+									<stringvalue>mozilla</stringvalue>
+								</default>
+								<longdesc>全部 URL 的默认浏览器。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="at">
+						<dir name="visual">
+							<entry name="startup" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+								<local_schema locale="C" short_desc="启动首选的视觉辅助技术应用程序">
+									<default type="bool" value="false"/>
+									<longdesc>GNOME 将要在登录时启动的首选视觉辅助技术应用程序。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome">
+								<local_schema locale="C" short_desc="首选的视觉辅助技术应用程序">
+									<default type="string">
+										<stringvalue>orca</stringvalue>
+									</default>
+									<longdesc>为登录、菜单或命令行使用的首选视觉辅助技术应用程序。</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="mobility">
+							<entry name="startup" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+								<local_schema locale="C" short_desc="启动首选的行动辅助技术应用程序">
+									<default type="bool" value="false"/>
+									<longdesc>GNOME 将要在登录时启动的首选移动辅助技术应用程序。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="exec" mtime="1453565964" type="schema" stype="string" owner="gnome">
+								<local_schema locale="C" short_desc="首选的行动辅助技术应用程序">
+									<default type="string">
+										<stringvalue>dasher</stringvalue>
+									</default>
+									<longdesc>为登录、菜单或命令行使用的首选移动辅助技术应用程序。</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+				</dir>
+				<dir name="accessibility">
+					<dir name="startup">
+						<entry name="exec_ats" mtime="1453565964" type="schema" stype="list" owner="gnome" list_type="string">
+							<local_schema locale="C" short_desc="启动辅助技术应用程序">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc>登录 GNOME 桌面时启动的辅助技术应用程序列表。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="keyboard">
+						<entry name="togglekeys_enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stickykeys_modifier_beep" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>按下修改键时响铃。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stickykeys_two_key_off" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>如果两个键同时按下则禁用。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stickykeys_enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_beep_reject" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_beep_accept" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_beep_press" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_delay" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="最小间隔毫秒数">
+								<default type="int" value="300"/>
+								<longdesc>除非按住 @delay 毫秒不放，否则不接受按键输入。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="slowkeys_enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_init_delay" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="初始延迟毫秒数">
+								<default type="int" value="300"/>
+								<longdesc>在鼠标移动键起作用前等待多少毫秒。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_accel_time" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="经过多少毫秒后开始加速">
+								<default type="int" value="300"/>
+								<longdesc>在多少毫秒内从 0 增长到最大速度。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_max_speed" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="每秒像素点">
+								<default type="int" value="10"/>
+								<longdesc>最大速度时每秒钟移动多少个像素点。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mousekeys_enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bouncekeys_beep_reject" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bouncekeys_delay" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="最小间隔毫秒数">
+								<default type="int" value="300"/>
+								<longdesc>忽略在 @delay 毫秒内多次按下的“同一个”键。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="bouncekeys_enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="timeout" mtime="1453565964" type="schema" stype="int" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="int" value="200"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="timeout_enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="feature_state_change_beep" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable" mtime="1453565964" type="schema" stype="bool" owner="gnome">
+							<local_schema locale="C" short_desc="Project-Id-Version: libgnome master Report-Msgid-Bugs-To:  POT-Creation-Date: 2010-07-14 11:45+0800 PO-Revision-Date: 2010-07-14 11:46+0800 Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt; Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt; MIME-Version: 1.0 Content-Type: text/plain; charset=UTF-8 Content-Transfer-Encoding: 8bit ">
+								<default type="bool" value="false"/>
+								<longdesc>Project-Id-Version: libgnome master
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2010-07-14 11:45+0800
+PO-Revision-Date: 2010-07-14 11:46+0800
+Last-Translator: Aron Xu &lt;happyaron.xu@gmail.com&gt;
+Language-Team: Chinese/Simplified &lt;i18n-zh@googlegroups.com&gt;
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
 		<dir name="system">
+			<dir name="smb">
+				<entry name="workgroup" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="SMB 工作组">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The Windows networking workgroup or domain that the user 
+        is part of. In order for a new workgroup to fully take effect 
+        the user may need to log out and log back in. </longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="proxy">
+				<entry name="autoconfig_url" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="自动代理配置 URL">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>提供代理配置值的 URL。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="socks_port" mtime="1453565964" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="SOCKS 代理端口">
+						<default type="int" value="0"/>
+						<longdesc>The port on the machine defined by &quot;/system/proxy/socks_host&quot;
+        that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="socks_host" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="SOCKS 代理主机名">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>代理套接字的机器名。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="ftp_port" mtime="1453565964" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="FTP 代理端口">
+						<default type="int" value="0"/>
+						<longdesc>The port on the machine defined by &quot;/system/proxy/ftp_host&quot;
+        that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="ftp_host" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="FTP 代理主机名">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>代理 FTP 的机器名。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="secure_port" mtime="1453565964" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="安全 HTTP 代理端口">
+						<default type="int" value="0"/>
+						<longdesc>The port on the machine defined by &quot;/system/proxy/secure_host&quot;
+        that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="secure_host" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="安全 HTTP 代理主机名">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>代理安全 HTTP 的机器名。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="mode" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="代理配置模式">
+						<default type="string">
+							<stringvalue>none</stringvalue>
+						</default>
+						<longdesc>Select the proxy configuration mode. Supported values are
+	&quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="http_proxy">
+				<entry name="ignore_hosts" mtime="1453565964" type="schema" stype="list" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0" list_type="string">
+					<local_schema locale="C" short_desc="非代理服务器">
+						<default type="list" ltype="string">
+							<li type="string">
+								<stringvalue>localhost</stringvalue>
+							</li>
+							<li type="string">
+								<stringvalue>127.0.0.0/8</stringvalue>
+							</li>
+						</default>
+						<longdesc>This key contains a list of hosts which are connected to
+	directly, rather than via the proxy (if it is active). The values can
+	be hostnames, domains (using an initial wildcard like *.foo.com), IP
+	host addresses (both IPv4 and IPv6) and network addresses with a
+	netmask (something like 192.168.0.0/24).</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="authentication_password" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="HTTP 代理密码">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>用于 HTTP 代理认证的密码。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="authentication_user" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="HTTP 代理用户名">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>用于 HTTP 代理认证的用户名。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="use_authentication" mtime="1453565964" type="schema" stype="bool" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="认证代理服务器连接">
+						<default type="bool" value="false"/>
+						<longdesc>If true, then connections to the proxy server require
+        authentication. The username/password combo is defined by
+        &quot;/system/http_proxy/authentication_user&quot; and
+        &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="port" mtime="1453565964" type="schema" stype="int" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="HTTP 代理端口">
+						<default type="int" value="8080"/>
+						<longdesc>The port on the machine defined by &quot;/system/http_proxy/host&quot;
+        that you proxy through.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="host" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="HTTP 代理主机名">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>代理 HTTP 的机器名。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="use_http_proxy" mtime="1453565964" type="schema" stype="bool" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="使用 HTTP 代理">
+						<default type="bool" value="false"/>
+						<longdesc>Enables the proxy settings when accessing HTTP over the
+        Internet.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="dns_sd">
+				<entry name="extra_domains" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="DNS-SD 服务应查阅的额外域">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>Comma separated list of DNS-SD domains that should be
+        visible in the &quot;network:///&quot; location.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="display_local" mtime="1453565964" type="schema" stype="string" owner="gnome-vfs" gettext_domain="gnome-vfs-2.0">
+					<local_schema locale="C" short_desc="如何显示本地 DNS-SD 服务">
+						<default type="string">
+							<stringvalue>merged</stringvalue>
+						</default>
+						<longdesc>可供选择的值有“merged”、“separate”和“disabled”。</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
 			<dir name="gstreamer">
 				<dir name="0.10">
 					<dir name="default">
